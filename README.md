@@ -1,2 +1,2 @@
 # AirBnB_clone
-A clone of the AirBnB website.
+A clone of the AirBnB website - The Console.
