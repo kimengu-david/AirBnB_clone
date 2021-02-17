@@ -22,10 +22,10 @@ class BaseModel:
         d_format = "%Y-%m-%dT%H:%M:%S.%f"
         if kwargs != 0:
             for key, value in kwargs.items():
-                if key != "__class__":
-                    if key == "updated_at" or key == "created_at":
-                        value = datetime.strptime(value, d_format)
-                    setattr(self, key, value)
+                #if key != "__class__"
+                if key == "updated_at" or key == "created_at":
+                    value = datetime.strptime(value, d_format)
+                setattr(self, key, value)
         else:
             models.storage.new(self)
 
