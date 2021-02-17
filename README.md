@@ -1,2 +1,2 @@
-<center># AirBnB_clone</center>
+# AirBnB_clone
 A clone of the AirBnB website - The Console.
