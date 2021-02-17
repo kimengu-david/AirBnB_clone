@@ -26,10 +26,7 @@ class BaseModel:
                         value = datetime.strptime(value, d_format)
                     setattr(self, key, value)
         else:
-            # Means this is a new instance and not from a dictionary.
-            self.created_at = datetime.utcnow()
-            self.id = str(uuid4)
-            self.updated_at = datetime.utcnow()
+            # Means this is a new instance and not from a dictionary
             models.storage.new(self)
 
     def save(self):
