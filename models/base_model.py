@@ -17,7 +17,7 @@ class BaseModel:
             **kwargs (dict): Key-value pairs of dictionary attributes.
         """
         self.id = str(uuid4())
-        self.updated_at = datetime.today() 
+        self.updated_at = datetime.today()
         self.created_at = datetime.today()
         d_format = "%Y-%m-%dT%H:%M:%S.%f"
         if kwargs is not None:
