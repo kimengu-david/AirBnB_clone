@@ -6,6 +6,7 @@ import os
 from models.base_model import BaseModel
 from datetime import datetime
 
+
 class TestBaseModel(unittest.TestCase):
     """Performs unittests for the base model class"""
 
@@ -23,9 +24,9 @@ class TestBaseModel(unittest.TestCase):
     @classmethod
     def tearDownClass(cls):
         """Performs cleanup
-           Restores the original file.json
+        Restores the original file.json
         """
-       #  del cls.base_inst
+        #  del cls.base_inst
         try:
             os.remove("file.json")
         except IOError:
@@ -81,13 +82,13 @@ class TestBaseModel(unittest.TestCase):
     def test_save(self):
         """ Test save method """
         self.base_inst.save()
-        self.assertNotEqual(self.base_inst.created_at, self.base_inst.updated_at)
+        create_time = self.base_inst.created_at
+        update_time = self.base_inst.updated_at
+        self.assertNotEqual(create_time, update_time)
         self.old = self.base_inst.updated_at
         self.base_inst.save()
         self.new = self.base_inst.updated_at
         self.assertIsNot(self.old, self.new)
-
-    
 
 if __name__ == "__main__":
     unittest.main()
