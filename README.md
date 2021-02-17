@@ -152,7 +152,7 @@ c3-f4bf-425e-b1d4-165f52c6ff81) {'updated_at': datetime.datetime(2019, 2, 17, 2
 3, 56, 899348), 'created_at': datetime.datetime(2019, 2, 17, 21, 43, 56, 899348
 ), 'id': 'fce2124c-8537-489b-956e-22da455cbee8'}"]
 (hbnb)
-
+```
 #### update
 * Usage: `update <class> <id> <attribute name> "<attribute value>"`
 
