@@ -17,7 +17,8 @@ class BaseModel:
             **kwargs (dict): Key-value pairs of dictionary attributes.
         """
         self.id = str(uuid4())
-        self.updated_at = self.created_at = datetime.utcnow()
+        self.updated_at = datetime.today() 
+        self.created_at = datetime.today()
         d_format = "%Y-%m-%dT%H:%M:%S.%f"
         if kwargs is not None:
             for key, value in kwargs.items():
@@ -33,8 +34,7 @@ class BaseModel:
         """ updates the public instance attribute
             updated_at with the current datetime
         """
-        self.updated_at = datetime.utcnow()
-        models.storage.new(self)
+        self.updated_at = datetime.today()
         models.storage.save()
 
     def to_dict(self):
