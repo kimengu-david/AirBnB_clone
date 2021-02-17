@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 """Defines class basemodel."""
 
 import models
@@ -16,11 +15,11 @@ class BaseModel:
             *args (any): Unused.
             **kwargs (dict): Key-value pairs of dictionary attributes.
         """
+        d_format = "%Y-%m-%dT%H:%M:%S.%f"
         self.id = str(uuid4())
         self.updated_at = datetime.today()
         self.created_at = datetime.today()
-        d_format = "%Y-%m-%dT%H:%M:%S.%f"
-        if kwargs != 0:
+        if len(kwargs) != 0:
             for key, value in kwargs.items():
                 if key == "updated_at" or key == "created_at":
                     self.__dict__[key] = datetime.strptime(value, d_format)
