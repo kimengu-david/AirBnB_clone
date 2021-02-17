@@ -1,4 +1,7 @@
 <h1 align="center">HolbertonBnB</h1>
+<p align="center">
+   <img src="https://davikani.s3.eu-west-3.amazonaws.com/images/holberton/holberton.png">
+</p>
 <p align="center">A clone of AirBnB website.</p>
 
 ### Table of contents.</br>
