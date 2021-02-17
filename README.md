@@ -175,4 +175,6 @@ ef0fdc863c02'}
 (hbnb)
 ```
 
-
+## Authors :black_nib:
+* **David Mutune Kimengu** <[kimengu-david](https://github.com/kimengu-david)>
+* **Ewar James** <[EwarJames](https://github.com/EwarJames)>
