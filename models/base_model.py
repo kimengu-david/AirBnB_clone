@@ -43,7 +43,6 @@ class BaseModel:
         c_dict["__class__"] = self.__class__.__name__
         c_dict["created_at"] = self.created_at.isoformat()
         c_dict["updated_at"] = self.updated_at.isoformat()
-        c_dict["id"] = str(uuid4())
         return c_dict
 
     def __str__(self):
