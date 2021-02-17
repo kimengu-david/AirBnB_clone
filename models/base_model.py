@@ -20,7 +20,7 @@ class BaseModel:
         self.updated_at = datetime.today()
         self.created_at = datetime.today()
         d_format = "%Y-%m-%dT%H:%M:%S.%f"
-        if kwargs is not None:
+        if kwargs != 0:
             for key, value in kwargs.items():
                 if key != "__class__":
                     if key == "updated_at" or key == "created_at":
